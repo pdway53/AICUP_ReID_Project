@@ -6,7 +6,7 @@ conda create -n botsort python=3.7
 conda activate botsort
 ```
 **Step 2.** Install torch and matched torchvision from [pytorch.org](https://pytorch.org/get-started/locally/).<br>
-The code was tested using torch 1.11.0+cu113 and torchvision==0.12.0 
+The code was tested using torch 1.10.1+cu102 and torchvision==0.11.2
 
 **Step 3.** Fork this Repository and clone your Repository to your device
 
@@ -105,8 +105,8 @@ the trained models in 'pretrained' folder as follows:
 ```
 <BoT-SORT_dir>/pretrained
 ```
-final yolov7 trained weight : pretrained/yolov7-w6-AICUP7_049.pt
-yolov7 pretrained model : pretrained/yolov7-w6_training.pt 
+Final yolov7 trained weight : pretrained/yolov7-w6-AICUP7_049.pt`.
+Yolov7 pretrained model : pretrained/yolov7-w6_training.pt `.
 
 
 
@@ -126,7 +126,7 @@ The training results will be saved by default at `runs/train`.
 
 
 ### Tracking and creating the submission file for AICUP 
-If you want to track all `<timestamps>` in the directory, you can execute the bash file we provided.
+If you want to track all `<timestamps>` in the directory, you can execute the bash file we provided and clean cnt.txt file to 0. Make sure the ID start from 0
 ```shell
 sh tools/track_all_timestamps2.sh --weights pretrained/yolov7-w6-AICUP7_049.pt --source-dir ./<test_data_dir>/32_33_AI_CUP_testdataset/AI_CUP_testdata/images --device "0" --fast-reid-config "fast_reid/configs/AICUP/bagtricks_R50-ibn.yml" --fast-reid-weights "logs/AICUP_BOT_resnet/bagtricks_R50-ibn/model_0058.pth"
 ```
