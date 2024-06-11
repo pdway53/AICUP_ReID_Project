@@ -126,14 +126,18 @@ The training results will be saved by default at `runs/train`.
 
 
 ### Tracking and creating the submission file for AICUP 
-If you want to track all `<timestamps>` in the directory, you can execute the bash file we provided and clean cnt.txt file to 0. Make sure the ID start from 0
+If you want to track all `<timestamps>`testdata the same as submit, you can execute the bash file we provided and clean cnt.txt file to 0. Make sure the ID start from 0
 ```shell
 sh tools/track_all_timestamps2.sh --weights pretrained/yolov7-w6-AICUP7_049.pt --source-dir ./<test_data_dir>/32_33_AI_CUP_testdataset/AI_CUP_testdata/images --device "0" --fast-reid-config "fast_reid/configs/AICUP/bagtricks_R50-ibn.yml" --fast-reid-weights "logs/AICUP_BOT_resnet/bagtricks_R50-ibn/model_0058.pth"
 ```
 The submission file and visualized images will be saved by default at `runs/submit/<timestamp>`.
 
 
-
+### Track the spesific timestamp
+If you want to track specific `<timestamps>` video data, you can execute the bash as following
+```shell
+python tools/mc_demo_yolov7_day_night_submit.py --weights "$WEIGHTS" --source "$folder" --device "$DEVICE" --name "$timestamp" --fuse-score --agnostic-nms --with-reid --fast-reid-config "$FAST_REID_CONFIG" --fast-reid-weights "$FAST_REID_WEIGHTS"
+```
 
 
 
