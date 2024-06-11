@@ -1,0 +1,40 @@
+_BASE_: ../Base-SBS.yml
+
+
+INPUT:
+  SIZE_TRAIN: [256, 256]
+  SIZE_TEST: [256, 256]
+
+MODEL:
+  BACKBONE:
+    NAME: build_resnest_backbone
+    WITH_IBN: True #add
+    WITH_NL: True
+    PRETRAIN: True
+    PRETRAIN_PATH: './pretrained/veri_sbs_R50-ibn.pth'  #add pretrain
+
+SOLVER:
+  OPT: SGD
+  BASE_LR: 0.001
+  ETA_MIN_LR: 7.7e-5
+
+  IMS_PER_BATCH: 32
+  MAX_EPOCH: 60
+  WARMUP_ITERS: 1000 #3000
+  FREEZE_ITERS: 1000 #3000
+
+  CHECKPOINT_PERIOD: 10
+
+DATASETS:
+  NAMES: ("AICUP",)
+  TESTS: ("AICUP",)
+
+
+DATALOADER:
+  SAMPLER_TRAIN: BalancedIdentitySampler
+
+TEST:
+  EVAL_PERIOD: 10
+  IMS_PER_BATCH: 35
+
+OUTPUT_DIR: logs/AICUP_sbs0517/sbs_S50
