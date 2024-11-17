@@ -1,5 +1,5 @@
 ## [AICUP 2024] Competition-2024-跨相機多目標車輛追蹤競賽
-https://tbrain.trendmicro.com.tw/Competitions/Details/33
+https://tbrain.trendmicro.com.tw/Competitions/Details/33 <br>
 Extremely low frame-rate (1 fps) video object tracking challenge
 ## 2nd place in 跨相機多目標車輛追蹤競賽模型組 and 執行效能獎
 
