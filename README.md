@@ -1,5 +1,10 @@
+## [AICUP 2024] Competition-2024-跨相機多目標車輛追蹤競賽
+https://tbrain.trendmicro.com.tw/Competitions/Details/33
+Extremely low frame-rate (1 fps) video object tracking challenge
+## 2nd place in 跨相機多目標車輛追蹤競賽模型組 and 執行效能獎
 
-### Setup with Conda
+
+## Setup with Conda
 **Step 1.** Create Conda environment and install pytorch.
 ```shell
 conda create -n botsort python=3.7
