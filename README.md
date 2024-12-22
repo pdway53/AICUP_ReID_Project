@@ -3,13 +3,15 @@ https://tbrain.trendmicro.com.tw/Competitions/Details/33 <br>
 Extremely low frame-rate (1 fps) video object tracking challenge
 ## 2nd place in 跨相機多目標車輛追蹤競賽模型組 and 執行效能獎
 
-https://github.com/user-attachments/assets/20fc4543-e6ec-4d56-9a64-8a7bcaa828c3
 
-https://github.com/user-attachments/assets/a8ea9150-8dc6-4d99-8f0b-ba2ed34229f0
+![image](https://github.com/pdway53/AICUP_ReID_Project/blob/main/out_video/1016_130000_1316003.gif)
 
+![image](https://github.com/pdway53/AICUP_ReID_Project/blob/main/1016_180000_1816002_1.gif)
+
+![image](https://github.com/pdway53/AICUP_ReID_Project/blob/main/out_video/0903_125957_1316104_2.gif)
 
 ## Technique HighLight
-<br>
+
 ![image](https://github.com/pdway53/AICUP_ReID_Project/blob/main/BOTSORT.png)
 
 -Tracking Framework : BOTSORT<br>
