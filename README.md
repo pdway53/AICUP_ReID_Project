@@ -7,6 +7,17 @@ https://github.com/user-attachments/assets/20fc4543-e6ec-4d56-9a64-8a7bcaa828c3
 
 https://github.com/user-attachments/assets/a8ea9150-8dc6-4d99-8f0b-ba2ed34229f0
 
+
+## Technique HighLight
+
+Tracking Framework : BOTSORT
+
+Detector : YoloV7
+
+Day/Night classifier
+
+ReID : Bag of Tricks(BoT) framework
+
 ## Setup with Conda
 **Step 1.** Create Conda environment and install pytorch.
 ```shell
