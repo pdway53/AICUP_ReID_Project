@@ -9,14 +9,14 @@ https://github.com/user-attachments/assets/a8ea9150-8dc6-4d99-8f0b-ba2ed34229f0
 
 
 ## Technique HighLight
+<br>
+![image](https://github.com/pdway53/AICUP_ReID_Project/blob/main/BOTSORT.png)
 
-Tracking Framework : BOTSORT
-
-Detector : YoloV7
-
-Day/Night classifier
-
-ReID : Bag of Tricks(BoT) framework
+-Tracking Framework : BOTSORT<br>
+-Detector : YoloV7<br>
+-Day/Night classifier<br>
+-ReID : Bag of Tricks(BoT) , Backbone model: Resnet101<br>
+-Add vihicle motion predict score on linear assignment<br>
 
 ## Setup with Conda
 **Step 1.** Create Conda environment and install pytorch.
