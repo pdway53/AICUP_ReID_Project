@@ -59,14 +59,14 @@ pip install faiss-gpu
 
 
 
-### ReID Model 
+### ReID Model :
 
-For training the ReID, detection patches must be generated as follows:   
+ReId Data preprocssing : before training the ReID, detection patches must be generated as follows:   
 ```shell
 python fast_reid/datasets/generate_AICUP_patches.py --data_path <dataets_dir>/AI_CUP_MCMOT_dataset/train
 ```
 
-#Train ReID MODEL
+Train ReID MODEL :
 ```shell
 python fast_reid/tools/train_net.py --config-file fast_reid/configs/AICUP/bagtricks_R50-ibn.yml MODEL.DEVICE "cuda:0"
 ```
@@ -126,18 +126,18 @@ the trained models in 'pretrained' folder as follows:
 ```
 <BoT-SORT_dir>/pretrained
 ```
-Final yolov7 trained weight : pretrained/yolov7-w6-AICUP7_049.pt`.
-Yolov7 pretrained model : pretrained/yolov7-w6_training.pt `.
+Final yolov7 trained weight : pretrained/yolov7-w6-AICUP7_049.pt<br>
+Yolov7 pretrained model : pretrained/yolov7-w6_training.pt <br>
 
 
 
 
 #Fine-tune YOLOv7 for AICUP
 
-- The dataset path is configured in `yolov7/data/AICUP.yaml`.
-- The model architecture can be configured in `yolov7/cfg/training/yolov7-AICUP.yaml`.
-- Training hyperparameters are configured in `yolov7/data/hyp.scratch.custom.yaml` (default is `yolov7/data/hyp.scratch.p5.yaml`).
-- pretrained model : pretrained/yolov7-w6_training.pt  from (https://github.com/WongKinYiu/yolov7/releases/download/v0.1/)
+- The dataset path is configured in `yolov7/data/AICUP.yaml`<br>
+- The model architecture can be configured in `yolov7/cfg/training/yolov7-AICUP.yaml`<br>
+- Training hyperparameters are configured in `yolov7/data/hyp.scratch.custom.yaml` (default is `yolov7/data/hyp.scratch.p5.yaml`)<br>
+- pretrained model : pretrained/yolov7-w6_training.pt  from (https://github.com/WongKinYiu/yolov7/releases/download/v0.1/)<br>
 
 ```shell
 python yolov7/train_aux.py --device "0" --batch-size 4 --epochs 50 --data yolov7/data/AICUP.yaml --img 1280 1280 --cfg yolov7/cfg/training/yolov7-w6-AICUP.yaml --weights 'pretrained/yolov7-w6_training.pt' --name yolov7-w6-AICUP --hyp data/hyp.scratch.custom.yaml
